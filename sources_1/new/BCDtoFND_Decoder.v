@@ -3,7 +3,7 @@
 module BCDtoFND_Decoder(
 input [3:0] i_value,
 input i_en,
-output [7:0]o_font
+output [7:0] o_font
     );
 
     reg[7:0] r_font;
@@ -22,9 +22,10 @@ output [7:0]o_font
                 4'h4: r_font = 8'h99;
                 4'h5: r_font = 8'h92;
                 4'h6: r_font = 8'h82;
-                4'h7: r_font = 8'h80;
-                4'h8: r_font = 8'h90;
-                4'h9: r_font = 8'h7f;
+                4'h7: r_font = 8'hf8;
+                4'h8: r_font = 8'h80;
+                4'h9: r_font = 8'h90;
+                4'ha: r_font = 8'h7f;
                 default : r_font =8'hff; //넣어줘야 RTL_Ratch 가 사라짐 맨위에 = 4'r_font = 8'hff                
             endcase 
         end

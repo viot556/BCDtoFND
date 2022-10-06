@@ -12,11 +12,13 @@ FND_Select_Decoder dut(
     .i_en(i_en),
     .o_digit(o_digit)
 );
+
 BCDtoFND_Decoder dut1(
     .i_value(i_value),
     .i_en(i_en),
     .o_font(o_font)
 );
+
 initial begin
     #00 i_en = 1'b1; i_digitSelect = 2'b00;
     #10 i_en = 1'b1; i_digitSelect = 2'b01;
